@@ -1,6 +1,8 @@
 package com.antel;
 
 import com.antel.entities.Bid;
+import com.antel.entities.PremiumBid;
+import com.antel.entities.SimpleBid;
 
 import javax.annotation.Resource;
 import javax.ejb.*;
@@ -17,9 +19,17 @@ public class TimerBid {
     public void timerBid(Timer timer){
         System.out.println("timerBid");
 
-        Bid bid = new Bid();
-        bid.setBidAmount(400);
-        placeBidLocal.addBid(bid);
+        SimpleBid simpleBid = new SimpleBid();
+        simpleBid.setBidAmount(400);
+        simpleBid.setSimpleBidId("SimpleBid1");
+
+        PremiumBid premiumBid = new PremiumBid();
+        premiumBid.setBidAmount(500);
+        premiumBid.setPremiumBid("PremiumBid1");
+
+
+        placeBidLocal.addBid(simpleBid);
+        placeBidLocal.addBid(premiumBid);
 
 
     }
