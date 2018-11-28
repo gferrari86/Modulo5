@@ -1,0 +1,8 @@
+*.DS_Store
+*.iml
+.idea/
+ActionBaazar/ear/target/
+ActionBaazar/ejbs/target/
+ActionBaazar/primary-source/target/
+ActionBaazar/projects/logging/target/
+ActionBaazar/servlets/servlet/target/
