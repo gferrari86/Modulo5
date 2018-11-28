@@ -54,6 +54,11 @@ public class ActionBazaarGUI4 extends HttpServlet {
         } else if("itemid".equals(operation)){
 
             placeOrderLocal.setItemId(Long.parseLong(parameter));
+
+        } else if("addBid".equals(operation)){
+
+            placeOrderLocal.addBid(Long.parseLong(parameter));
+
         }else if("confirm".equals(operation)){
 
             placeOrderLocal.confirmOrder();

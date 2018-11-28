@@ -21,6 +21,12 @@
  <input type="submit" value="billingAddress" />
 </form>
 
+<form action ="PlaceOrder3">
+ <input type="hidden" name="operation" value="addBid" />
+ <input type="text" name="parameter" />
+ <input type="submit" value="bidId" />
+</form>
+
 
 <form action ="PlaceOrder3">
  <input type="hidden" name="operation" value="confirm" />

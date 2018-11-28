@@ -12,4 +12,6 @@ public interface PlaceOrderLocal {
     public void setBillingAddress(String billingAddress);
 
     public void confirmOrder();
+
+    void addBid(long l);
 }
