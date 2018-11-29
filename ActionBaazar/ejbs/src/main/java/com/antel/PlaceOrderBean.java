@@ -31,7 +31,7 @@ public class PlaceOrderBean implements PlaceOrderLocal {
     @PostConstruct
     public void Initialize(){
         order = new Order();
-        order.setStatus(EnumStatus.EN_PROGRESO);
+        order.setStatus(EnumStatus.PROGRESS);
         System.out.println("Stateful - PostConstruct");
     }
 
