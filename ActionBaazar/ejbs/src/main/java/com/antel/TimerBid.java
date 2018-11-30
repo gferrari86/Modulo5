@@ -15,7 +15,7 @@ public class TimerBid {
     PlaceBid placeBidLocal;
 
 
-    @Schedules(value = {@Schedule(minute = "*",hour = "*")})
+  //  @Schedules(value = {@Schedule(minute = "*",hour = "*")})
     public void timerBid(Timer timer){
         System.out.println("timerBid");
 

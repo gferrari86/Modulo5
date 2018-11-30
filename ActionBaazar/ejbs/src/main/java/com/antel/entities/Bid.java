@@ -1,11 +1,12 @@
 package com.antel.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="BID")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Bid {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class Bid implements Serializable {
 
     protected Long id;
     private int bidderId;
@@ -34,7 +35,7 @@ public class Bid {
         return itemId;
     }
 
-    public void setItemId(int itemId) {
+    public void setItemId(long itemId) {
         this.itemId = itemId;
     }
 

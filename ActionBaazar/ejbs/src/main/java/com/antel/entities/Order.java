@@ -2,6 +2,7 @@ package com.antel.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,7 +21,8 @@ public class Order implements Serializable {
     private EnumStatus status;
 
     @OneToMany
-    private List<Bid> bids;
+    @JoinColumn(name="order_id")
+    private List<Bid> bids = new ArrayList<Bid>();
 
     public long getItemId() {
         return itemId;

@@ -65,7 +65,7 @@ public class PlaceOrderBean implements PlaceOrderLocal {
         System.out.println("enviarOrden.sendMessage");
 
         entityManager.persist(order);
-        timerAlertOrderInt.timerAlertOrder(order);
+        //timerAlertOrderInt.timerAlertOrder(order);
         enviarOrden.sendMessage(order);
 
     }
