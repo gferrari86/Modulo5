@@ -65,6 +65,7 @@ public class PlaceOrderBean implements PlaceOrderLocal {
         System.out.println("enviarOrden.sendMessage");
 
         entityManager.persist(order);
+        entityManager.flush(); // Fuerza a persistir porque sino hace el merge que solicita con el mensaje antes de que persista la orden
         //timerAlertOrderInt.timerAlertOrder(order);
         enviarOrden.sendMessage(order);
 
