@@ -6,6 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+
+@NamedQueries({
+
+        @NamedQuery(
+                name = "findAllOrderDONE",
+                query = "SELECT o FROM Order o WHERE o.status = 'DONE'"
+
+        )
+
+})
+
 @Table(name="AB_ORDER")
 public class Order implements Serializable {
 

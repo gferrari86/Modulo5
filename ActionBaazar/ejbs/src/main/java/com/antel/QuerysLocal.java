@@ -9,5 +9,6 @@ import java.util.List;
 public interface QuerysLocal {
 
     public List<Order> findAllOrderDONE();
+    public List<Order> findAllOrderBidId(Long bidId);
 
 }
